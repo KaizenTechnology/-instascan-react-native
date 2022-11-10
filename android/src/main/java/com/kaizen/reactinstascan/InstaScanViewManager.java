@@ -125,7 +125,7 @@ public class InstaScanViewManager extends SimpleViewManager<KZNInstaScanView> {
     }
 
 
-    public Map getExportedCustomBubblingEventTypeConstants() {
+     public Map getExportedCustomBubblingEventTypeConstants() {
         return MapBuilder.builder().put(
                 "topPincodeRead",
                 MapBuilder.of(
@@ -133,9 +133,14 @@ public class InstaScanViewManager extends SimpleViewManager<KZNInstaScanView> {
                         MapBuilder.of("bubbled", "onPincodeRead")
                 )
         ).put("topInstaScanError", MapBuilder.of(
-                "phasedRegistrationNames",
-                MapBuilder.of("bubbled", "onInstaScanError")
-        )).build();
+                    "phasedRegistrationNames",
+                    MapBuilder.of("bubbled", "onInstaScanError")
+                )
+        ).put("topInstaScanLoad", MapBuilder.of(
+                    "phasedRegistrationNames",
+                    MapBuilder.of("bubbled", "onInstaScanLoad")
+                )
+        ).build();
     }
 
     @Override

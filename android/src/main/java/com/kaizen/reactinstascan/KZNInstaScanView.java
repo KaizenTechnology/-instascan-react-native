@@ -94,4 +94,12 @@ public class KZNInstaScanView extends InstaScanView {
                 .getJSModule(RCTEventEmitter.class)
                 .receiveEvent(getId(),"topInstaScanError",event);
     }
+
+    @Override
+    protected void onLoad() {
+      super.onLoad();
+      reactContext
+            .getJSModule(RCTEventEmitter.class)
+            .receiveEvent(getId(),"topInstaScanLoad");
+    }
 }

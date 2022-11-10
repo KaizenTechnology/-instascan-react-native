@@ -13,6 +13,7 @@ import InstaScan
 public class KZNInstaScanView:InstaScanView{
     @objc public var onPincodeRead:RCTBubblingEventBlock?
     @objc public var onInstaScanError:RCTBubblingEventBlock?
+    @objc public var onInstaScanLoad:RCTBubblingEventBlock?
 
     @objc public func startScan(){
         
@@ -41,6 +42,11 @@ public class KZNInstaScanView:InstaScanView{
         event["imagePath"] = filePath.absoluteString
         event["configuration"] = result.configuration.description
         onPincodeRead?(event)
+    }
+
+    open override func onLoad() {
+        super.onLoad()
+        onInstaScanLoad?()
     }
     
     @objc public var torchStatus:Bool{

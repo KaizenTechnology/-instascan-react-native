@@ -52,6 +52,7 @@
 
     RCT_EXPORT_VIEW_PROPERTY(onPincodeRead, RCTBubblingEventBlock)
     RCT_EXPORT_VIEW_PROPERTY(onInstaScanError, RCTBubblingEventBlock)
+    RCT_EXPORT_VIEW_PROPERTY(onInstaScanLoad, RCTBubblingEventBlock)
 
 
 @end
