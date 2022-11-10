@@ -24,6 +24,8 @@ declare module "instascan-react-native" {
 
       onPincodeRead?: (event: PincodeEvent) => void;
       onError?: (event: ErrorEvent) => void;
+      onLoad?: () => void;
+      
     }
     
 

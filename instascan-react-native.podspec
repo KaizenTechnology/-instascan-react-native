@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift}"
   s.requires_arc = true
   s.dependency "React"
-  s.dependency "InstaScan"
+  s.dependency "InstaScan","~> 1.0.2"
   # ...
 end
 

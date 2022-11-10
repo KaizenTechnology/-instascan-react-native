@@ -75,7 +75,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.kaizen:instascan:1.0.0'
+    implementation 'com.kaizen:instascan:1.0.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
 
