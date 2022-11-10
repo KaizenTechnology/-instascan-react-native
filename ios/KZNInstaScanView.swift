@@ -46,7 +46,8 @@ public class KZNInstaScanView:InstaScanView{
 
     open override func onLoad() {
         super.onLoad()
-        onInstaScanLoad?()
+        let event:[String:Any] = [:]
+        onInstaScanLoad?(event)
     }
     
     @objc public var torchStatus:Bool{

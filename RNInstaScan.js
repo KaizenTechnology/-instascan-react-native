@@ -56,6 +56,8 @@ export default class InstaScan extends Component {
         ref={ref => this.instaScanRef = ref}
         style = {{flex:1}}
         {...this.props}
+        
+        onInstaScanLoad={this.props.onLoad}
         onPincodeRead={({nativeEvent}) => {
           this.updateGuideText(nativeEvent.pincode)
     

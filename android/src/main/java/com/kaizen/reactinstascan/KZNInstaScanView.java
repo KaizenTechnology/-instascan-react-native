@@ -98,8 +98,10 @@ public class KZNInstaScanView extends InstaScanView {
     @Override
     protected void onLoad() {
       super.onLoad();
+      ReactContext reactContext = (ReactContext)getContext();
+      WritableMap event = Arguments.createMap();
       reactContext
             .getJSModule(RCTEventEmitter.class)
-            .receiveEvent(getId(),"topInstaScanLoad");
+            .receiveEvent(getId(),"topInstaScanLoad",event);
     }
 }
